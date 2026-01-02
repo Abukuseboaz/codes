@@ -4,7 +4,7 @@ public class librarybook {
 
     public static void main(String[] args) {
     Scanner scanner=new Scanner(System.in);
-
+// prompt user to enter data
     System.out.println("Enter book ID: ");
     int bookID= scanner.nextInt();
 
@@ -13,11 +13,11 @@ public class librarybook {
 
     System.out.println("Enter return date(number of days): ");
     int returndate=scanner.nextInt();
-
+// calculate overdue time
     int overdue=returndate-Duedate;
 
     int fineamount;
-    
+    // processing
     if(overdue<=7) {
 
         fineamount=overdue*20;
@@ -29,7 +29,7 @@ public class librarybook {
     else{
         fineamount=overdue*100;
         }
-
+// print output
         System.out.println("FINE RATE IS AS FOLLOW:");
         System.out.println("For <=7 days: 20/=");
         System.out.println("For <14 days: 50/=");
@@ -40,5 +40,6 @@ public class librarybook {
         System.out.println("Days of overdue: " + overdue);
         System.out.println("The fine amount: " + fineamount);
     }
+
 
 }
